@@ -1,0 +1,107 @@
+.nav-link{
+    margin-left: 1rem;
+}
+
+.nav-masthead .nav-link {
+    color: rgba(255, 255, 255, 0.643);
+    border-bottom: .25rem solid transparent;
+}
+
+form {
+    margin-top: 20px;
+  }
+li{
+  color: black !important;
+  text-align: left !important;
+}
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  input[type="submit"] {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+
+  .response-area {
+    margin-top: 20px;
+    background-color: #f0f0f0;
+
+    padding: 20px 5px;
+  }
+  .texto-receta{
+    color: rgb(54, 54, 54) ;
+    text-align: center;
+  }
+
+  #random {
+    background-color: #cd032b;
+  }
+
+  #random:hover {
+    background-color: #;
+  }
+  #saludable {
+    background-color: #2ecc71;
+  }
+
+  #desayuno:hover {
+    background-color: #27ae60;
+  }
+
+  #Media-mañana {
+    background-color: #3498db;
+  }
+
+  #Media-mañana:hover {
+    background-color: #2980b9;
+  }
+
+  #almuerzo {
+    background-color: #9b59b6;
+  }
+
+  #almuerzo:hover {
+    background-color: #8e44ad;
+  }
+
+  #media-tarde {
+    background-color: #f1c40f;
+  }
+
+  #media-tarde:hover {
+    background-color: #f39c12;
+  }
+
+  #cena {
+    background-color: #e74c3c;
+  }
+
+  #cena:hover {
+    background-color: #c0392b;
+  }
+
+
+  /* <ul>
+  <% recipe.extendedIngredients.forEach(ingredient=> { %>
+      <li><%= ingredient.name %></li>
+  <% }) %>
+</ul> */

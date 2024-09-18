@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme-value="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recetas</title>
+</head>
+<body>
+    <body class="container d-flex h-100 text-center text-bg-dark" > 
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+            <h3 class="float-md-start mb-0">Receting</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link fw-bold py-1 px-0" href="#">Escribeme</a>
+            </nav>
+            </div>
+        </header>
+        
+        <main class="px-3">
+            <h1>Recetas diarias</h1>
+            <p class="lead">No sabes qué cocinar? Yo tampoco!!!</p>
+            <div class="container">
+                <form id="myForm" method="post">              
+                    <label for="submit">Prueba tu suerte y elige tu próxima receta:</label>
+                    <input id="random" type="submit" value="Elige por mi" formaction="/random"> 
+                     <input id="saludable" type="submit" value="saludable" formaction="/saludable">
+                    <input id="Media-mañana" type="submit" value="Media mañana" formaction="/media-mañana">
+                    <input id="almuerzo" type="submit" value="Almuerzo" formaction="/almuerzo">
+                    <input id="media-tarde" type="submit" value="Media tarde" formaction="/media-tarde">
+                    <input id="cena" type="submit" value="Cena" formaction="/cena">
+                  </form>
+            </div>
+            <div class="container response-area">
+                <% if (locals.recipe) { %>
+                <div>
+                    <p class="texto-receta">
+                        
+                            <img src="<%= recipe.image %>" alt="">
+                            </br>
+                           <b>Recipe #:</b>  <%- recipe.id %>
+                            </br>
+                            <b>Name:</b>  <%- recipe.title %>
+                            </br>
+                            <b>Preparation time:</b> <%- recipe.readyInMinutes %> minutes
+                            </br>
+                            <b>Serving size:</b> <%- recipe.servings %>
+                            </br>
+                            <b>Healthy level:</b> <%- recipe.healthScore %></br></br></br>
+                            <ul>
+                                <% recipe.extendedIngredients.forEach(ingredient=> { %>
+                                    <li><%= ingredient.name %></li>
+                                <% }) %>
+                              </ul></br>
+                                <p class="texto-receta">Instructions:</p><b> </br>
+                                </b> <%- recipe.instructions %>
+                      
+                    </p>
+                </div>
+
+            </div>
+            <% }else{%>
+                <p class="texto-receta">No hay receta para hoy. Inténtalo de nuevo pronto.</p>
+              <% }%>
+              
+        </main>
+        
+        <footer class="mt-auto text-white-50">
+            <p>Desarrollado por Gabolandi</p>
+        </footer>
+        </div>
+        <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+            
+        
+        
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
