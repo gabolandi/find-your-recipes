@@ -49,7 +49,7 @@ li{
   }
   .texto-receta{
     color: rgb(54, 54, 54) ;
-    text-align: center;
+    text-align: left;
   }
 
   #random {
@@ -57,9 +57,9 @@ li{
   }
 
   #random:hover {
-    background-color: #;
+    background-color: #cd032bc4;
   }
-  #saludable {
+  #desayuno {
     background-color: #2ecc71;
   }
 
@@ -100,8 +100,3 @@ li{
   }
 
 
-  /* <ul>
-  <% recipe.extendedIngredients.forEach(ingredient=> { %>
-      <li><%= ingredient.name %></li>
-  <% }) %>
-</ul> */
