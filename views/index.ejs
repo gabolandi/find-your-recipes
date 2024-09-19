@@ -15,8 +15,7 @@
             <div>
             <h3 class="float-md-start mb-0">Receting</h3>
             <nav class="nav nav-masthead justify-content-center float-md-end">
-                <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Inicio</a>
-                <a class="nav-link fw-bold py-1 px-0" href="#">Escribeme</a>
+                <a class="nav-link fw-bold py-1 px-0" href="mailto:gabolandi02@gmail.com">Escribeme</a>
             </nav>
             </div>
         </header>
@@ -28,11 +27,6 @@
                 <form id="myForm" method="post">              
                     <label for="submit">Prueba tu suerte y elige tu próxima receta:</label>
                     <input id="random" type="submit" value="Elige por mi" formaction="/random"> 
-                     <input id="saludable" type="submit" value="saludable" formaction="/saludable">
-                    <input id="Media-mañana" type="submit" value="Media mañana" formaction="/media-mañana">
-                    <input id="almuerzo" type="submit" value="Almuerzo" formaction="/almuerzo">
-                    <input id="media-tarde" type="submit" value="Media tarde" formaction="/media-tarde">
-                    <input id="cena" type="submit" value="Cena" formaction="/cena">
                   </form>
             </div>
             <div class="container response-area">
@@ -51,13 +45,14 @@
                             <b>Serving size:</b> <%- recipe.servings %>
                             </br>
                             <b>Healthy level:</b> <%- recipe.healthScore %></br></br></br>
+                            <b>Ingredients: </b> </br>
                             <ul>
                                 <% recipe.extendedIngredients.forEach(ingredient=> { %>
                                     <li><%= ingredient.name %></li>
                                 <% }) %>
                               </ul></br>
-                                <p class="texto-receta">Instructions:</p><b> </br>
-                                </b> <%- recipe.instructions %>
+                                <p class="texto-receta"> <b>Instructions: </b> </br>
+                                    <%- recipe.instructions %></p>
                       
                     </p>
                 </div>
